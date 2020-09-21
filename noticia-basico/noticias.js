@@ -1,4 +1,5 @@
 const http = require('http')
+const porta = 3000
 
 http.createServer(function (requisição, resposta) {
 
@@ -16,8 +17,4 @@ http.createServer(function (requisição, resposta) {
       break;
   }
 
-}).listen(3000) //porta para escudar o servidor
-
-// PARA O NAVEGADOR ENTRAR http://localhost:3000
-
-// ELE NÃO ENTENDE O REQUEST http://localhost/moda
+}).listen(porta)
