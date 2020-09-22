@@ -1,5 +1,6 @@
 const express = require('express')
-
+//const mensagem = require('./meu-modulo/teste')() // executar a função
+const mensagem = require('./meu-modulo/teste')
 const app = express()
 const porta = 3000
 
@@ -21,4 +22,5 @@ app.get('/noticias', (requisição, resposta) => {
 
 app.listen(porta, () => {
   console.log('Servidor inicializando em EXPRESS.JS')
+  console.log(mensagem())
 })

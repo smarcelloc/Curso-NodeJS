@@ -3,6 +3,9 @@ const express = require('express')
 const app = express()
 const porta = 3000
 
+//http.METHODS['ACL', 'BIND', 'CHECKOUT', 'CONNECT', 'COPY', 'DELETE', 'GET', 'HEAD', 'LINK', 'LOCK', 'M-SEARCH', 'MERGE', 'MKACTIVITY', 'MKCALENDAR', 'MKCOL', 'MOVE', 'NOTIFY', 'OPTIONS', 'PATCH', 'POST', 'PROPFIND', 'PROPPATCH', 'PURGE', 'PUT', 'REBIND', 'REPORT', 'SEARCH', 'SUBSCRIBE', 'TRACE', 'UNBIND', 'UNLINK', 'UNLOCK', 'UNSUBSCRIBE']
+
+
 // Definir a utilização do EJS
 app.set('view engine', 'ejs') // vai buscar no diretório view
 app.set('views', __dirname + '/views')
