@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Notícias</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+  <h1 class="my-5">Notícias</h1>
+
+  <table class="table table-hover">
+    <tr class="bg-primary text-white">
+      <th title="id">#</th>
+      <th>Título</th>
+      <th>Conteúdo</th>
+      <th>Ação</th>
+    </tr>
+    <% noticias.forEach(element => { %>
+    <tr>
+      <td><%= element.id %></td>
+      <td class="font-weight-bold"><%= element.titulo %></td>
+      <td><%= element.conteudo %></td>
+      <td>
+        <a href="#" class="btn btn-sm btn-primary pb-2" title="Ver notícia">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+          </svg>
+        </a>
+      </td>
+    </tr>
+    <% }) %>
+  </table>
+
+</body>
+
+</html>
