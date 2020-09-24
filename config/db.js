@@ -1,7 +1,7 @@
 require('dotenv').config()
 const mysql = require('mysql')
 
-let conexãoDB = () => {
+let conexaoDB = () => {
   return mysql.createConnection({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
@@ -12,5 +12,5 @@ let conexãoDB = () => {
 }
 
 module.exports = () => {
-  return conexãoDB
+  return conexaoDB
 }

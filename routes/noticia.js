@@ -1,6 +1,7 @@
-module.exports = (app) => {
+const NoticiaModel = require('../app/Models/NoticiaModel')
 
-  const noticiaModel = app.app.models.noticiaModel
+module.exports = (app) => {
+  const noticiaModel = new NoticiaModel(app.config.db())
 
   app.get('/noticia', (requisicao, resposta) => {
 
