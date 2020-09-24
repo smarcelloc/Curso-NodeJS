@@ -6,5 +6,9 @@ module.exports = (app) => {
     conexãoDB.query('select * from noticias', callback)
   }
 
+  this.insert = (noticia, callback) => {
+    conexãoDB.query(`insert into noticias set ?`, noticia, callback)
+  }
+
   return this
 }

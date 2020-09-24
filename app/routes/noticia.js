@@ -16,7 +16,8 @@ module.exports = (app) => {
 
   app.post('/noticia/add', (requisicao, resposta) => {
     let noticia = requisicao.body;
-    console.log(noticia)
-    resposta.send('ok')
+    noticiaModel.insert(noticia, () => {
+      resposta.redirect('/noticia')
+    })
   })
 }
