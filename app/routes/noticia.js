@@ -9,4 +9,14 @@ module.exports = (app) => {
     })
 
   })
+
+  app.get('/noticia/add', (requisicao, resposta) => {
+    resposta.render('noticia/form')
+  })
+
+  app.post('/noticia/add', (requisicao, resposta) => {
+    let noticia = requisicao.body;
+    console.log(noticia)
+    resposta.send('ok')
+  })
 }
