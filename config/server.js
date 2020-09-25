@@ -1,6 +1,7 @@
 const express = require('express')
 const consign = require('consign')
 const bodyParser = require('body-parser')
+require('dotenv').config()
 
 const app = express()
 
@@ -12,9 +13,12 @@ app.set('views', './app/Views')
 app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// Autoload
-consign()
-  .then('config/db.js')
+// Banco de dados
+app['conexaodb'] = require('../config/db')()
+
+// Autoload para função
+consign({ cwd: 'app' })
+  .then('validators')
   .include('routes')
   .into(app)
 
