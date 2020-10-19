@@ -3,9 +3,9 @@ const rules = [
   check('titulo', 'é obrigátorio').notEmpty(),
   check('titulo', 'máximo de 200 caracteres').isLength({ max: 200 }),
   check('conteudo', 'é obrigátorio').notEmpty(),
-  check('conteudo', 'deve conter entre 10 a 100 caracteres').isLength({
+  check('conteudo', 'deve conter entre 10 a 500 caracteres').isLength({
     min: 5,
-    max: 300,
+    max: 500,
   }),
 ];
 
